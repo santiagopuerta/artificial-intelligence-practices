@@ -98,7 +98,6 @@ Agent::ActionType Agent::DondeGirar(){
 	return accion;
 }
 
-
 //Para pintar la matriz mapa.
 void Agent::PintaMatriz(){
     for(int f=0; f<10; f++){
@@ -127,8 +126,6 @@ void Agent::CambiaPos(){
 			break;
 	}
 }
-
-
 
 // -----------------------------------------------------------
 void Agent::Perceive(const Environment &env)

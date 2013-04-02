@@ -18,10 +18,6 @@ public:
 	    x = 0;
 	    y = 0;
 	    orientacion = 0;
-	    vuelta = false;
-	    giro = false;
-	    choco = false;
-	    cuenta = 0;
 	    ultima = actFORWARD;
         for(int f=0; f<10; f++){
             for(int c=0; c<10; c++){
@@ -29,6 +25,7 @@ public:
             }
         }
 	}
+	
 	enum ActionType
 	{
 	    actFORWARD,
@@ -38,7 +35,6 @@ public:
 	    actIDLE
 	};
 	
-
 	void Perceive(const Environment &env);
 	ActionType Think();
 	void PintaMatriz();
@@ -49,11 +45,7 @@ private:
     int mapa[10][10];
     int x,y; // Posiciones actuales.
     int orientacion;
-    bool vuelta;
     ActionType ultima;
-    bool giro;
-    bool choco;
-    int cuenta;
 
 };
 
