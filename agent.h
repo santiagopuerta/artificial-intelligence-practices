@@ -40,6 +40,7 @@ public:
 	void PintaMatriz();
 	void CambiaPos();
 	ActionType DondeGirar();
+	void ActualizaMapa();
 private:
 	bool bump_, dirty_;
     int mapa[10][10];
