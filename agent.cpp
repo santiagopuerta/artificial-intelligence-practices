@@ -80,14 +80,14 @@ Agent::ActionType Agent::DondeGirar(){
         cout << "derecha: " << derecha << endl;
         cout << "izquierda: " << izquierda << endl;
 		*/
-        if(delante != -1 and delante > derecha and delante > izquierda){
+        if(delante != -1 && delante > derecha && delante > izquierda){
             //cout << "Primer if" << endl;
             accion = actFORWARD;
-        }else if(derecha != -1 and derecha > delante and derecha > izquierda){
+        }else if(derecha != -1 && derecha > delante && derecha > izquierda){
             //cout << "Segundo if" << endl;
             accion = actTURN_R;
             orientacion = (orientacion + 1)%4;
-        }else if(izquierda != -1 and izquierda > delante and izquierda > derecha){
+        }else if(izquierda != -1 && izquierda > delante && izquierda > derecha){
             //cout << "Tercer if" << endl;
             accion = actTURN_L;
             orientacion = (orientacion + 3)%4;
