@@ -1,0 +1,16 @@
+
+
+paths = ['.', '../include']
+flags = ['-Werror']
+libs = ['GL', 'GLU', 'glut', 'glui']
+libpaths = ['../lib']
+
+
+sources = Glob('*.cpp')
+for src in sources:
+  if src.name == 'agent_r.cpp':
+    sources.remove(src)
+
+
+Program('../bin/agent', sources, CPPPATH=paths, CPPFLAGS=flags,
+    LIBPATH=libpaths, LIBS=libs)
